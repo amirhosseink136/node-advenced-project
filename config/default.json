@@ -1,0 +1,6 @@
+{
+  "name" : "authproject",
+  "db" : {
+    "address" : "mongodb//localhost:27017/amirproject"
+  }
+}
