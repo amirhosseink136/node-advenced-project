@@ -1,13 +1,10 @@
 const express = require("express");
-let users = require("./users")
 const {body, validationResult} = require("express-validator");
 const { default: helmet } = require("helmet");
 const config = require("config")
 const app = express()
 const morgan = require("morgan")
 const debug = require("debug")("amir : main")
-const userRouter = require("./routes/users")
-const homeRouter = require("./routes/home")
 const mongoose = require("mongoose")
 
 const router = require("./src/routes")
@@ -77,10 +74,6 @@ async function removeUser(id){
   console.log(user);
 }
 
-
-console.log("Aplication Name:" , config.get("name"));
-console.log("Aplication Version:" , config.get("version"));
-console.log("sms ip:" , config.get("sms.ip"));
 
 const port = process.env.port || 3000;
 app.listen(port, ()=>{console.log(`listening to port ${port}`)} )
