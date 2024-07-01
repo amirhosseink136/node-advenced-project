@@ -1,4 +1,5 @@
 const {validationResult} = require('express-validator')
+const User = require('./../models/user')
 
 module.exports = class {
   constructor() {
@@ -9,7 +10,7 @@ module.exports = class {
     if(!result.isEmpty()){
       const errors = result.array();
       const message = [];
-      errors.forEach(err => message.push(err.msg));
+      errors.forEach((err) => message.push(err.msg));
       res.status(400).json({
         message : 'validationerror',
         data : message
@@ -25,4 +26,14 @@ module.exports = class {
     }
     next()
   }
+
+  response({res, message , code=200 ,data={}}){
+    res.status(code.json({
+      message,
+      data
+    })
+  )
+  }
+
+
 };

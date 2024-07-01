@@ -12,10 +12,13 @@
   "description": "",
   "dependencies": {
     "auto-bind": "^5.0.1",
+    "bcrypt": "^5.1.1",
     "config": "^3.3.12",
     "debug": "^4.3.5",
     "express": "^4.19.2",
     "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
     "mongoose": "^8.4.4",
     "mongoose-timestamp": "^0.6.0"
   }

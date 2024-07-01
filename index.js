@@ -10,7 +10,7 @@ const mongoose = require("mongoose")
 const router = require("./src/routes")
 
 
-app.use("amirhossein", router )
+app.use("api", router )
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
